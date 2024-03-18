@@ -19,7 +19,7 @@ const Header = () => {
               <Link to="/projects">Projects</Link>
             </li>
             <li>
-              <Link to="/mpre">More</Link>
+              <Link to="/more">More</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>

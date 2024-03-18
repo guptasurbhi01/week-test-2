@@ -1,6 +1,4 @@
-/* About.css */
-
-/* Container */
+Container
 .container {
   max-width: 800px;
   margin: auto;
@@ -8,31 +6,37 @@
 }
 
 /* Main Section */
-#expandable-section {
-  margin-bottom: 40px;
+.about {
+  background-color: #007bff;
+  padding: 40px;
+  border-radius: 10px;
 }
 
-.about{
-    background-color: #007bff;
-}
 /* Expanded Section */
 #more {
   display: none;
 }
 
 /* Services, Languages, Technologies, Hobbies Sections */
-.service, .languages, .technologies, .hobbies {
+.service,
+.languages,
+.technologies,
+.hobbies {
   margin-bottom: 40px;
 }
 
 /* Headings */
-h2, h3, h4, h5 {
+h2,
+h3,
+h4 {
   margin-top: 0;
   color: #333;
 }
 
 /* List Items */
-.service-item, .languages-item, .hobbies-item {
+.service-item,
+.technologies-item,
+.hobbies-item {
   display: flex;
   margin-bottom: 20px;
   padding: 15px;
@@ -40,49 +44,69 @@ h2, h3, h4, h5 {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  width: 60%;
-  height: 150px;
+}
+.languages-item{
+    /* display:flex; */
 }
 
 /* Hover Effect on List Items */
-.service-item:hover, .languages-item:hover, .technologies-item:hover, .hobbies-item:hover {
+.service-item:hover,
+.languages-item:hover,
+.technologies-item:hover,
+.hobbies-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Content Boxes */
-.service-icon-box, .languages-content-box, .hobbies-content-box {
+.service-icon-box,
+.languages-content-box,
+.hobbies-content-box {
   flex: 0 0 auto;
 }
 
 /* Columns for Languages */
 .languages-column {
   display: flex;
+  flex-direction: column;
+  width: 50%;
   justify-content: space-between;
 }
 
 /* Lists */
-.languages-list,  .hobbies-list {
+.languages-list,
+.hobbies-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
 }
-.technologies-list{
-    list-style-type: none;
+.title-wrapper{
     display: flex;
-    flex-wrap: wrap;
+    gap: 0.4rem;
+     /* justify-content: center; */
+    align-items: center; 
+}
+.technologies-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Adjust item width */
-.languages-item, .technologies-item, .hobbies-item {
+
+.technologies-item,
+.hobbies-item {
   width: calc(50% - 10px);
 }
 
 /* Image styles */
-.languages-item img, .technologies-item img, .hobbies-item img {
+.languages-item img,
+.technologies-item img,
+.hobbies-item img {
   max-width: 40px;
   height: auto;
   margin-right: 15px;
@@ -94,11 +118,14 @@ h2, h3, h4, h5 {
 }
 
 /* Card styles for hobbies */
-.hobbies-item .content-card {
+.hobbies-item {
   border-radius: 10px;
   padding: 20px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content-card {
+    display: flex;
 }
 
 /* Pagination Box */
@@ -121,6 +148,48 @@ h2, h3, h4, h5 {
 .pagination-button:hover {
   background-color: #0056b3;
 }
-.content-card{
-    display: flex;
+
+/* Additional Styling */
+.languages-item,
+.technologies-item,
+.hobbies-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.languages-progress-fill,
+.languages-progress-bg,
+.technologies-item img,
+.hobbies-item img {
+  transition: all 0.3s ease;
+}
+
+.languages-progress-bg,
+.languages-progress-fill {
+  position: absolute;
+  height: 100%;
+}
+
+.languages-progress-bg {
+  background-color: #ddd;
+  width: 100%;
+}
+
+.languages-progress-fill {
+  background-color: #007bff;
+  width: 0;
+}
+
+.languages-item:hover .languages-progress-fill {
+  width: calc(100% - 20px);
+}
+
+.technologies-item img,
+.hobbies-item img {
+  transition: transform 0.3s ease;
+}
+
+.technologies-item:hover img,
+.hobbies-item:hover img {
+  transform: scale(1.1);
 }
